@@ -1,0 +1,187 @@
+/* --- ГЛОБАЛЬНЫЕ СТИЛИ --- */
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+:root {
+    --yellow: #f5b301;
+    --yellow-glow: #ffcc00;
+    --black: #0a0a0a;
+    --dark-gray: #1a1a1a;
+    --white: #ffffff;
+    --gold-gradient: linear-gradient(135deg, #f5b301, #ffdd55);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- ШАПКА --- */
+header {
+    position: fixed; top: 0; left: 0; width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(245, 179, 1, 0.2);
+    z-index: 1000; padding: 15px 5%;
+}
+
+.header-content {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1200px; margin: 0 auto;
+}
+
+.logo { font-size: 24px; font-weight: 900; letter-spacing: 1px; display: flex; align-items: center; gap: 5px; }
+.logo span { color: var(--yellow); }
+.logo .bolt { color: var(--yellow); font-size: 28px; }
+
+.header-contacts { display: flex; align-items: center; gap: 20px; }
+
+.phone { font-weight: 700; font-size: 18px; color: var(--white); transition: color 0.3s; }
+.phone:hover { color: var(--yellow); }
+
+.btn-vk {
+    background: #0077FF; color: white; padding: 8px 20px; border-radius: 30px;
+    font-weight: 600; font-size: 14px; transition: transform 0.3s, box-shadow 0.3s;
+    display: flex; align-items: center; gap: 8px;
+}
+.btn-vk:hover { transform: translateY(-2px); box-shadow: 0 0 15px rgba(0, 119, 255, 0.5); }
+
+/* --- НАВИГАЦИЯ --- */
+.nav-buttons { display: flex; justify-content: center; gap: 15px; padding: 120px 20px 40px; flex-wrap: wrap; }
+
+.nav-btn {
+    background: transparent; border: 2px solid var(--yellow); color: var(--white);
+    padding: 12px 30px; border-radius: 50px; font-family: 'Montserrat', sans-serif;
+    font-weight: 700; font-size: 16px; cursor: pointer; transition: all 0.4s ease;
+    position: relative; overflow: hidden; text-transform: uppercase;
+}
+
+.nav-btn::before {
+    content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: var(--gold-gradient); transition: left 0.4s ease; z-index: -1;
+}
+.nav-btn:hover { color: var(--black); box-shadow: 0 0 20px rgba(245, 179, 1, 0.4); }
+.nav-btn:hover::before { left: 0; }
+
+/* --- СЕКЦИИ --- */
+section { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+
+/* --- БЛОК 1: ОБО МНЕ --- */
+.about-section { display: flex; align-items: center; gap: 60px; padding-top: 20px; }
+.about-text { flex: 1; }
+.about-text h2 { font-size: 42px; font-weight: 900; margin-bottom: 20px; color: var(--white); }
+.about-text h2 span { color: var(--yellow); }
+.about-text p { font-size: 18px; color: #cccccc; margin-bottom: 15px; }
+.about-text .highlight {
+    font-weight: 700; color: var(--white); border-left: 4px solid var(--yellow);
+    padding-left: 15px; margin: 20px 0;
+}
+.contact-info { margin-top: 25px; font-size: 18px; font-weight: 600; }
+.contact-info div { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.contact-info .icon { color: var(--yellow); font-size: 20px; }
+.phone-link { color: var(--yellow); }
+
+.about-image { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; }
+.photo-placeholder {
+    width: 100%; max-width: 400px; height: auto; border-radius: 20px;
+    border: 3px solid var(--yellow); box-shadow: 0 0 40px rgba(245, 179, 1, 0.2);
+    overflow: hidden; background: #1a1a1a; display: flex; justify-content: center; align-items: center;
+    aspect-ratio: 4/5;
+}
+.about-photo { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- БЛОК 2: ЗАЯВКА --- */
+.request-section {
+    background: var(--dark-gray); border-radius: 30px; padding: 60px 40px;
+    margin: 40px auto; border: 1px solid rgba(245, 179, 1, 0.2);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5); text-align: center;
+}
+.request-section h2 { font-size: 36px; font-weight: 900; margin-bottom: 15px; }
+.request-section h2 span { color: var(--yellow); }
+.request-section p { color: #aaa; margin-bottom: 40px; font-size: 16px; }
+
+.form-group { max-width: 500px; margin: 0 auto 20px; }
+
+.form-group input {
+    width: 100%; padding: 18px 25px; border-radius: 50px;
+    border: 2px solid #333; background: #111; color: white; font-size: 16px;
+    font-family: 'Montserrat', sans-serif; outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    letter-spacing: 1px;
+}
+.form-group input:focus { border-color: var(--yellow); box-shadow: 0 0 15px rgba(245, 179, 1, 0.2); }
+.form-group input::placeholder { color: #666; letter-spacing: normal; }
+
+.btn-submit {
+    background: var(--gold-gradient); color: var(--black); border: none;
+    padding: 18px 50px; border-radius: 50px; font-size: 18px; font-weight: 800;
+    cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; text-transform: uppercase; margin-top: 10px;
+}
+.btn-submit:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(245, 179, 1, 0.5); }
+.btn-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+.form-message { margin-top: 20px; font-weight: 600; font-size: 16px; display: none; }
+.form-message.success { color: #4CAF50; display: block; }
+.form-message.error { color: #f44336; display: block; }
+
+/* --- БЛОК 3: ОБ ЭЛЕКТРИКЕ --- */
+.electric-section h2 { font-size: 36px; font-weight: 900; text-align: center; margin-bottom: 40px; }
+.electric-section h2 span { color: var(--yellow); }
+
+.post-block { margin-bottom: 60px; }
+.post-title {
+    font-size: 24px; font-weight: 800; color: var(--yellow);
+    margin-bottom: 20px; text-align: center; text-transform: uppercase; letter-spacing: 1px;
+}
+
+.carousel-wrapper { position: relative; max-width: 800px; margin: 0 auto; display: flex; align-items: center; gap: 15px; }
+.carousel-container {
+    display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 20px;
+    padding: 10px 0; scrollbar-width: none; -ms-overflow-style: none; border-radius: 20px;
+}
+.carousel-container::-webkit-scrollbar { display: none; }
+
+.carousel-item {
+    flex: 0 0 100%; border-radius: 20px; overflow: hidden;
+    border: 2px solid #333; transition: border-color 0.3s;
+    background: var(--black);
+}
+.carousel-item:hover { border-color: var(--yellow); }
+.carousel-item img { width: 100%; height: auto; display: block; object-fit: contain; }
+
+.carousel-btn {
+    background: var(--gold-gradient); color: var(--black); border: none;
+    width: 50px; height: 50px; border-radius: 50%; font-size: 20px; font-weight: 900;
+    cursor: pointer; display: flex; justify-content: center; align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s; flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(245, 179, 1, 0.3);
+}
+.carousel-btn:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(245, 179, 1, 0.6); }
+.carousel-btn:active { transform: scale(0.95); }
+
+/* --- ПОДВАЛ --- */
+footer { text-align: center; padding: 40px; border-top: 1px solid #222; color: #555; font-size: 14px; }
+
+/* --- АДАПТИВНОСТЬ --- */
+@media (max-width: 900px) {
+    .about-section { flex-direction: column-reverse; gap: 30px; }
+    .header-content { flex-direction: column; gap: 10px; }
+    .header-contacts { width: 100%; justify-content: center; }
+    .nav-buttons { padding-top: 160px; }
+    .carousel-wrapper { max-width: 100%; padding: 0 10px; }
+    .carousel-btn { width: 40px; height: 40px; font-size: 16px; }
+    .post-title { font-size: 20px; }
+}
+@media (max-width: 500px) {
+    .about-text h2 { font-size: 30px; }
+    .nav-btn { width: 100%; text-align: center; }
+    .request-section { padding: 40px 20px; }
+    .phone { font-size: 15px; }
+    .btn-vk { font-size: 12px; padding: 6px 15px; }
+    .logo { font-size: 20px; }
+}

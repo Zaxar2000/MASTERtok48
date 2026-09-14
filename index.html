@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МастерТок | Электромонтаж под ключ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                МАСТЕР<span>ТОК</span> <span class="bolt">⚡</span>
+            </div>
+            <div class="header-contacts">
+                <a href="tel:+79997880118" class="phone">8 (999) 788-01-18</a>
+                <a href="https://m.vk.ru/club238197809" target="_blank" class="btn-vk">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974H.863c-.514 0-.825.264-.825.668 0 .891 1.688 3.39 3.646 5.836 2.903 3.625 5.914 4.611 9.478 4.611z"/></svg>
+                    ВКонтакте
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- НАВИГАЦИЯ -->
+    <div class="nav-buttons">
+        <button class="nav-btn" data-target="about">Обо мне</button>
+        <button class="nav-btn" data-target="request">Оставить заявку</button>
+        <button class="nav-btn" data-target="electric">Об электрике</button>
+    </div>
+
+    <!-- БЛОК 1: ОБО МНЕ -->
+    <section id="about" class="about-section">
+        <div class="about-text">
+            <h2>Обо <span>мне</span></h2>
+            <p>😎 Всем привет!</p>
+            <p>Меня зовут Антон, 28 лет. Я являюсь основателем компании <strong>МастерТок⚡</strong></p>
+            <div class="highlight">
+                Мы занимаемся электромонтажными работами «под ключ» — от проекта до полного запуска.<br>
+                Работаем с квартирами, домами и коммерческими объектами.
+            </div>
+            <p>Делаем надёжно, аккуратно и с гарантией.</p>
+            <p><strong>МастерТок — свет будет💡</strong></p>
+
+            <div class="contact-info">
+                <div><span class="icon">📍</span> Липецк и Липецкая область</div>
+                <div><span class="icon">📞</span> <a href="tel:+79997880118" class="phone-link">8 (999) 788-01-18</a></div>
+                <div><span class="icon">📩</span> Пиши или звони — обсудим задачу</div>
+            </div>
+        </div>
+        <div class="about-image">
+            <div class="photo-placeholder">
+                <!-- Замени на свое фото из папки images -->
+                <img src="images/anton.jpg" alt="Антон - основатель МастерТок" class="about-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 2: ЗАЯВКА -->
+    <section id="request" class="request-section">
+        <h2>Оставить <span>заявку</span></h2>
+        <p>Оставьте свой номер телефона, и я перезвоню вам в течение 30 минут, чтобы обсудить вашу задачу.</p>
+
+        <!-- ВАЖНО: Замени ВАШ_ID_ФОРМЫ на реальный ID из Formspree -->
+        <form action="https://formspree.io/f/mzebnggd" method="POST" id="leadForm">
+            <div class="form-group">
+                <input type="tel" id="phoneInput" name="phone" placeholder="+7 (___) ___-__-__" maxlength="18" required>
+            </div>
+            <button type="submit" class="btn-submit">Отправить</button>
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </section>
+
+    <!-- БЛОК 3: ОБ ЭЛЕКТРИКЕ -->
+    <section id="electric" class="electric-section">
+        <h2>Об <span>электрике</span></h2>
+
+        <!-- ПОСТ 1 -->
+        <div class="post-block">
+            <h3 class="post-title">Мифы об электрике</h3>
+            <div class="carousel-wrapper" id="post1">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-container">
+                    <div class="carousel-item"><img src="images/mif-1.jpg" alt="Миф 1"></div>
+                    <div class="carousel-item"><img src="images/mif-2.jpg" alt="Миф 2"></div>
+                    <div class="carousel-item"><img src="images/mif-3.jpg" alt="Миф 3"></div>
+                    <div class="carousel-item"><img src="images/mif-4.jpg" alt="Миф 4"></div>
+                    <div class="carousel-item"><img src="images/mif-5.jpg" alt="Миф 5"></div>
+                    <div class="carousel-item"><img src="images/mif-6.jpg" alt="Миф 6"></div>
+                    <div class="carousel-item"><img src="images/mif-7.jpg" alt="Миф 7"></div>
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- ПОСТ 2 -->
+        <div class="post-block">
+            <h3 class="post-title">Электрика по полу или потолку</h3>
+            <div class="carousel-wrapper" id="post2">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-container">
+                    <div class="carousel-item"><img src="images/potolok-1.jpg" alt="Пол/потолок 1"></div>
+                    <div class="carousel-item"><img src="images/potolok-2.jpg" alt="Пол/потолок 2"></div>
+                    <div class="carousel-item"><img src="images/potolok-3.jpg" alt="Пол/потолок 3"></div>
+                    <div class="carousel-item"><img src="images/potolok-4.jpg" alt="Пол/потолок 4"></div>
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 МастерТок. Электромонтаж под ключ. Липецк и область.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
